@@ -6,6 +6,18 @@
   "characterViewportWidthRatio": 0.14,
   "contentBounds": { "x": 300, "y": 180, "width": 420, "height": 690 },
   "styleVersion": "v0.1",
+  "poseSignature": {
+    "faceOrientation": "THREE_QUARTER_LEFT",
+    "bodyOrientation": "SLIGHT_RIGHT",
+    "gestureFamily": "CASUAL_GUIDE",
+    "leftHand": "holds-folded-map-at-side",
+    "rightHand": "gentle-introduction-gesture",
+    "handPoseSignature": "left-map-at-side + right-gentle-guide",
+    "stance": "ONE_FOOT_FORWARD",
+    "weightDistribution": "right",
+    "footwear": "retro-sneakers",
+    "silhouetteNote": "asymmetric map-side arm and one leading foot"
+  },
   "preferredCorners": ["bottom-right", "bottom-left", "top-right", "top-left"],
   "interaction": "none",
   "pointerEvents": "none",

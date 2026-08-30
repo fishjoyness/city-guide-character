@@ -1,11 +1,11 @@
 ---
 name: city-guide-character
-description: Design one lightweight city-guide character sticker for a travel map from an approved travel-illustration STYLE_REFERENCE while staying subordinate to attraction markers. Use for 城市人物贴纸、城市导览角色、地图角落氛围角色, city-specific pose or prop planning, placement rules, review-only STYLE TEST generation, or character QA. Do not use for personal-IP portraits, character animation, attraction stickers, map runtime coding, or batch production before style approval.
+description: Design one lightweight city-guide character sticker for a travel map from an approved travel-illustration STYLE_REFERENCE while staying subordinate to attraction markers. Use for 城市人物贴纸、城市导览角色、地图角落氛围角色, city-specific pose or prop planning, placement rules, review-only STYLE TEST generation, character QA, or cross-city pose-diversity review when characters look like one body template with changed clothes. Do not use for personal-IP portraits, character animation, attraction stickers, map runtime coding, or batch production before style approval.
 ---
 
 # City Guide Character
 
-Status: **Finished / v0.1**
+Status: **Finished / v0.2 — pose-diversity update**
 
 ## Purpose
 
@@ -27,7 +27,7 @@ Runtime role: `MAP VIEWPORT OVERLAY`. It is not a geographic marker and is not a
 ### IN SCOPE
 
 - One young, approachable, travel-oriented guide character for one city.
-- Simple actions: read a map, point gently, look toward the reader, sit in a corner, wave lightly, hold a camera, small bag, city map, or one restrained city cue.
+- Simple actions: read a map, point gently, look toward the reader, wave lightly, hold or adjust a camera, interact with a bag strap, keep one hand in a pocket, or prepare to walk.
 - Reuse the attraction system's line, fill, saturation, negative-space, border, shadow, and polish level.
 - Add small city-specific variation without turning the character into a stereotype or complex city mascot.
 - Define the city's temperament before appearance, then express it through three to five coordinated differences rather than random hair/pose swaps.
@@ -39,7 +39,7 @@ Runtime role: `MAP VIEWPORT OVERLAY`. It is not a geographic marker and is not a
 - Character sheets, animation, expression packs, costumes, story scenes, voice, dialogue, or multiple characters per city.
 - Attraction/landmark art; use the companion `city-sticker` Skill instead.
 - Central hero art, map tutorial overlay, clickable helper, or visual element that competes with POI selection.
-- Production mini-program integration or batch generation in v0.1.
+- Production mini-program integration or uncontrolled batch generation before style and pose locks are approved. A controlled cross-city comparison batch is allowed for pose QA.
 
 ## Optional relationship to `city-sticker`
 
@@ -110,8 +110,8 @@ Set `CHARACTER_PEN_STYLE_LOCK = true`. Improving character appeal may change hai
 - Research the city before designing the person: temperament, contemporary daily visual culture, clothing context, travel behavior, and a restrained 2–4 color source palette. Prefer official government, culture, tourism, museum, or institutional sources for factual cues.
 - Record source URL, source owner, access date, and the exact design claim supported. A mood-board image alone is not cultural evidence.
 - If any ethnic or local dress detail is proposed, verify the exact culture, garment detail, use context, and source. Never merge details from different peoples, regions, or ceremonial contexts.
-- Create the required `CITY_CHARACTER_MANIFEST` with every field defined before generation.
-- Select three to five coordinated differences from temperament, hairstyle, outfit, palette, pose tendency, one main prop, local detail, and travel behavior. Hair or pose alone is never sufficient.
+- Create the required `CITY_CHARACTER_MANIFEST` with every field defined before generation, including a locked `POSE_SIGNATURE`.
+- Select coordinated differences from temperament, hairstyle, outfit, palette, pose signature, one main prop, local detail, and travel behavior. Across cities, at least three to four of `faceOrientation`, `bodyOrientation`, `gestureFamily`, `stance`, `silhouette`, and `footwear` must be visibly different; hair, outfit, palette, and prop remain additional dimensions.
 - Keep explicit local features to one or two. Prefer an overall city-appropriate temperament first, then support it with appearance.
 - Keep the base character young, relaxed, friendly, and travel-oriented. Avoid historical costume unless explicitly approved and appropriate.
 - Output: `city-cue-brief.md` with the complete manifest, research links, selected cues, rejected stereotypes, and `NONE` where no local cue is necessary.
@@ -130,7 +130,7 @@ Set `CHARACTER_PEN_STYLE_LOCK = true`. Improving character appeal may change hai
 ### Phase 5: Plan and prompt
 
 - Read [prompt-template.md](prompts/prompt-template.md) completely.
-- Lock one simple pose, at most one main prop, composition, alpha, visual hierarchy, and text `NONE`.
+- Lock one simple pose through `POSE_SIGNATURE`, at most one main prop, composition, alpha, visual hierarchy, and text `NONE`. Face and body orientation are independent decisions; do not default every character to a front body with a right-facing head.
 - Keep the exact shared style block unchanged across cities.
 - Output: `character-lock.json`, `placement.json`, `manifest.json`, and `prompt.txt`.
 - Exit: the prompt contains no unapproved city symbol, outfit, personification of a landmark, or complex action.
@@ -141,7 +141,7 @@ Set `CHARACTER_PEN_STYLE_LOCK = true`. Improving character appeal may change hai
 - Generate one 1024×1024 transparent PNG master for review. Do not place the character into a map screenshot as the master.
 - Use one neutral guide character, one simple action, and no text or background scene.
 - Label the result `CITY CHARACTER STYLE TEST` unless the user approved production status.
-- Do not generate other cities automatically.
+- Do not generate other cities automatically unless the user explicitly requested a controlled multi-city batch.
 - Failure path: if image generation is unavailable, return the research, lock, placement, and copy-ready prompt package.
 
 ### Phase 7: Validate and deliver
@@ -150,6 +150,7 @@ Set `CHARACTER_PEN_STYLE_LOCK = true`. Improving character appeal may change hai
 - For deterministic PNG checks, run the bundled inspector:
   `python scripts/inspect_sticker.py --input <png> --thumbnail <thumb.png> --report <report.json>` from this Skill directory.
 - Inspect the character alone, beside an accepted attraction sticker, and composited into a temporary map-corner preview.
+- When the batch contains at least three city characters, run `CROSS_CITY_POSE_REVIEW` before acceptance. Repair only failing characters, then repeat the review.
 - Return links, source roles, style version, placement decision, QA, and unresolved user decisions.
 - Keep all v0.1 outputs out of the mini-program production asset tree and data files.
 
@@ -163,13 +164,75 @@ Set `CHARACTER_PEN_STYLE_LOCK = true`. Improving character appeal may change hai
 
 - Treat each city character as a distinct branch of one shared character system, never as one base person recolored or given a different prop.
 - Freeze system-common fields across cities: `styleVersion`, pen behavior, flat-fill logic, saturation range, head/body ratio family, face-construction grammar, border/shadow policy, simplification depth, and map placement policy.
-- Give every city three to five clear differences selected from: temperament, hairstyle silhouette, modern outfit language, main palette tendency, pose tendency, one main prop, local detail, and travel behavior.
+- Give every city coordinated differences across temperament, hairstyle silhouette, modern outfit language, main palette tendency, pose signature, one main prop, local detail, and travel behavior.
+- Every character must differ visibly from its comparison set in at least three to four of: face orientation, body orientation, gesture family, stance, silhouette, and footwear. Do not rely on the held object as the primary distinction.
 - Keep every outfit modern and everyday. Vary travel, literary, campus, urban-casual, or light-sport language without using costume cosplay or stereotypes.
 - Use at most one main prop per character. At most one or two restrained city cues may appear; a city name, landmark collage, food pile, logo, or symbol stack is forbidden.
 - Reject both extremes: `CLONE` when the result is the same person with a recolor/prop swap, and `SYSTEM_DRIFT` when proportion, face, line, fill, or polish makes it look like another project.
 - Every delivery must state the city-specific difference points and the system-common traits retained.
 - Record `CHARACTER_DIFFERENTIATION = HIGH | LOW` and `STYLE_DIFFERENTIATION = LOW | HIGH`. Accept only `HIGH` character differentiation with `LOW` style differentiation.
 - Record `STICKER_CHARACTER_STYLE_COHERENCE = PASS | FAIL` beside at least one attraction sticker at equivalent visual scale.
+
+## Pose system — required
+
+Lock these fields before generation. Keep changes subtle, natural, readable, and mobile-friendly; no crouching, jumping, back-facing pose, extreme profile, or fashion-model twist.
+
+### `FACE_ORIENTATION`
+
+Allowed values: `FRONT`, `SLIGHT_LEFT`, `THREE_QUARTER_LEFT`, `SLIGHT_RIGHT`, `THREE_QUARTER_RIGHT`. Use `PROFILE_LEFT` or `PROFILE_RIGHT` only when the composition truly needs it.
+
+- Face orientation follows character composition, temperament, and map placement; it has no universal default.
+- In a batch of at least three characters, no more than 70% may use the same exact face orientation.
+
+### `BODY_ORIENTATION`
+
+Allowed values: `FRONT`, `SLIGHT_LEFT`, `SLIGHT_RIGHT`.
+
+- Choose body orientation independently from face orientation.
+- Valid combinations include body slight-left with face right, body slight-right with face left, or body front with face slight-left.
+- Keep torso rotation small and relaxed.
+
+### `GESTURE_FAMILY`
+
+Allowed values:
+
+- `TWO_HAND_HOLD`: map, book, or camera held with two hands; permitted but never the batch default.
+- `ONE_HAND_HOLD`: one hand holds a phone, camera, coffee, or booklet; the other relaxes, touches a pocket, holds a strap, or lifts slightly.
+- `POINTING`: one hand points gently into the map.
+- `STRAP_BAG_INTERACTION`: one hand holds a shoulder or backpack strap while the other relaxes.
+- `POCKET`: one hand rests in a pocket while the other holds one small object.
+- `CAMERA_ACTION`: camera hangs, is carried in one hand, is adjusted, or is about to be raised; not automatically centered at the chest.
+- `CASUAL_GUIDE`: one hand holds a map or card while the other makes a small introductory gesture.
+- `WALKING_READY`: one foot leads and arms show a restrained natural counter-swing.
+
+Record `handPoseSignature`, for example `left-hand-book + right-point`. Repeated `both-hands-center-hold` across consecutive city characters is blocking: `POSE_REPETITION = FAIL`, unless the user explicitly requested a uniform stance.
+
+### `STANCE`
+
+Allowed values: `NEUTRAL_PARALLEL`, `WEIGHT_LEFT`, `WEIGHT_RIGHT`, `ONE_FOOT_FORWARD`, `SLIGHT_OPEN`, `WALKING_READY`.
+
+- Vary weight distribution, foot lead, spacing, and toe angle subtly.
+- Parallel legs may appear, but must not become the batch default silhouette.
+
+### `FOOTWEAR`
+
+Choose footwear from contemporary city mood, season, outfit, and personality. Valid directions include `canvas-sneakers`, `retro-sneakers`, `loafers`, `mary-jane`, `simple-flats`, `ankle-boots`, `casual-leather-shoes`, `walking-shoes`, and seasonally appropriate `simple-sandals`.
+
+- Footwear serves the complete outfit and silhouette, not forced regional symbolism.
+- Preserve the shared simplified foot construction while changing the readable shoe outline.
+
+## `CROSS_CITY_POSE_REVIEW` — blocking for batches of 3+
+
+Place the characters side by side at equal visible height and also inspect them at map scale. Record:
+
+- `FACE_DIRECTION_DIVERSITY = PASS | FAIL`: no exact orientation exceeds 70%; the row does not visually lean one way.
+- `GESTURE_DIVERSITY = PASS | FAIL`: hands are not repeatedly clustered at the chest; `handPoseSignature` varies.
+- `STANCE_DIVERSITY = PASS | FAIL`: weight, foot lead, spacing, or walking readiness visibly varies.
+- `FOOTWEAR_DIVERSITY = PASS | FAIL`: shoe outlines are not mechanically repeated.
+- `SILHOUETTE_DIVERSITY = PASS | FAIL`: reduced-size outer contours do not read as one body template.
+- `PROP_INTERACTION_DIVERSITY = PASS | FAIL`: props are carried, adjusted, read, pointed with, or paired with a relaxed hand in different ways.
+
+If the first impression is “one template with changed hair and clothes,” record `SAME_SYSTEM_DIFFERENT_CHARACTER = FAIL` and repair the smallest set of failing characters. Shared proportions, face grammar, line system, simplification, color behavior, and map scale remain unchanged.
 
 ## CITY_CHARACTER_MANIFEST — required structure
 
@@ -184,6 +247,17 @@ primaryColors: [two-to-four, softened, researched colors]
 accentColor: one restrained accent or NONE
 poseTendency: one simple travel behavior
 prop: one main prop or NONE
+poseSignature:
+  faceOrientation: FRONT | SLIGHT_LEFT | THREE_QUARTER_LEFT | SLIGHT_RIGHT | THREE_QUARTER_RIGHT | PROFILE_LEFT | PROFILE_RIGHT
+  bodyOrientation: FRONT | SLIGHT_LEFT | SLIGHT_RIGHT
+  gestureFamily: TWO_HAND_HOLD | ONE_HAND_HOLD | POINTING | STRAP_BAG_INTERACTION | POCKET | CAMERA_ACTION | CASUAL_GUIDE | WALKING_READY
+  leftHand: exact relaxed action or prop interaction
+  rightHand: exact relaxed action or prop interaction
+  handPoseSignature: concise left-plus-right signature
+  stance: NEUTRAL_PARALLEL | WEIGHT_LEFT | WEIGHT_RIGHT | ONE_FOOT_FORWARD | SLIGHT_OPEN | WALKING_READY
+  weightDistribution: left | right | balanced-with-foot-lead
+  footwear: contemporary footwear silhouette
+  silhouetteNote: the visible outer-contour difference to preserve
 localFeature: [zero-to-two researched lightweight details]
 avoid: [exact complexity, cliché, and stereotype risks]
 mapRole: MAP_VIEWPORT_OVERLAY
@@ -191,6 +265,7 @@ styleVersion: shared style version
 ```
 
 - Never start image generation before these fields are defined.
+- `POSE_SIGNATURE` is a generation lock, not a description written after the image exists. If generation contradicts it, repair the image or revise the lock before acceptance.
 - `temperament` leads the design; the remaining fields support it.
 - The character must be cute, clean, soft, gentle, and appealing, with Q-style compact proportions, simple black lines, small facial features, and soft flat colors.
 - `localFeatureHint` cannot be a pasted city label. Use at most one or two natural details, such as a restrained textile trim, material accent, or city-appropriate activity.
@@ -204,6 +279,7 @@ styleVersion: shared style version
 
 - Use one 4–4.5-head compact Q-style proportion family across cities, with only very small natural variation.
 - Freeze the same hand/foot simplification, eye scale, nose/mouth reduction, face grammar, limb line language, and visual density.
+- Keep hand and foot construction consistent, but vary arm placement, weight shift, foot lead, toe angle, and shoe silhouette inside the shared grammar.
 - City identity must not come from changing one city to 3 heads and another to 6 heads.
 - Keep role diversity: young women, young men, and gender-neutral characters may coexist; do not let the library collapse into many near-identical girls.
 
@@ -234,12 +310,14 @@ styleVersion: shared style version
 - [ ] `STICKER_CHARACTER_STYLE_COHERENCE = PASS` at equivalent map scale.
 - [ ] `CHARACTER_DIFFERENTIATION = HIGH` and `STYLE_DIFFERENTIATION = LOW`.
 - [ ] Required `CITY_CHARACTER_MANIFEST` fields are complete before generation.
+- [ ] Required `POSE_SIGNATURE` is locked before generation and matches the final image.
 - [ ] `LOCAL_FEATURE_INTEGRATION = PASS`: local cues are researched, restrained, and naturally integrated.
 - [ ] `STEREOTYPE_RISK_CONTROL = PASS`: no costume overload, caricature, face typing, or unsupported regional symbol appears.
 - [ ] City cues are limited, evidence-backed, and non-stereotyped.
 - [ ] Pose is simple; there is at most one main prop; text and background are absent.
+- [ ] For a batch of 3+, `CROSS_CITY_POSE_REVIEW` passes all six diversity checks and `SAME_SYSTEM_DIFFERENT_CHARACTER = PASS`.
 - [ ] Safe corner, scale, collision zones, and hidden fallback are recorded.
 - [ ] `CHARACTER_VISIBLE_BOUNDS = PASS`: presentation width uses alpha/content bounds, not canvas width.
 - [ ] Attraction markers and controls remain unobstructed.
 - [ ] Candidate, if any, is labeled `CITY CHARACTER STYLE TEST`.
-- [ ] No batch generation or production integration occurred.
+- [ ] No uncontrolled batch generation or production integration occurred.

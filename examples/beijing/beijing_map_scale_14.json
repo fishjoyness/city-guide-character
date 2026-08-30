@@ -5,7 +5,7 @@
     "width": 780,
     "height": 1380
   },
-  "corner": "bottom-right",
+  "corner": "top-right",
   "characterViewportWidthRatio": 0.14,
   "visibleCharacterWidthPx": 109,
   "viewportSafeMarginPx": 22,

@@ -1,4 +1,4 @@
-# City Guide Character Prompt Template v0.1
+# City Guide Character Prompt Template v0.2
 
 Fill every bracket. Keep the shared style lock verbatim across attraction and character prompts.
 
@@ -33,6 +33,17 @@ Primary colors: [TWO TO FOUR SOFTENED RESEARCHED COLORS]
 Accent color: [ONE OR NONE]
 Pose tendency: [ONE SIMPLE TRAVEL BEHAVIOR]
 Prop: [ONE MAIN PROP OR NONE]
+POSE_SIGNATURE:
+  faceOrientation: [ALLOWED FACE_ORIENTATION]
+  bodyOrientation: [FRONT / SLIGHT_LEFT / SLIGHT_RIGHT]
+  gestureFamily: [ALLOWED GESTURE_FAMILY]
+  leftHand: [EXACT ACTION]
+  rightHand: [EXACT ACTION]
+  handPoseSignature: [CONCISE LEFT + RIGHT SIGNATURE]
+  stance: [ALLOWED STANCE]
+  weightDistribution: [LEFT / RIGHT / BALANCED WITH FOOT LEAD]
+  footwear: [CONTEMPORARY SHOE SILHOUETTE]
+  silhouetteNote: [OUTER-CONTOUR DIFFERENCE TO PRESERVE]
 Local feature: [ZERO TO TWO VERIFIED LIGHTWEIGHT DETAILS]
 Avoid: [EXACT COMPLEXITY / CLICHÉ / STEREOTYPE RISKS]
 Map role: MAP_VIEWPORT_OVERLAY
@@ -40,8 +51,11 @@ Style version: [SHARED STYLE VERSION]
 
 Express three to five coordinated character differences while preserving the shared visual system. Temperament leads and appearance supports it. Do not clone another city character by recoloring it, and do not drift into a different art system.
 
-POSE:
-[ONE SIMPLE ACTION: read map / gentle point / face reader / sit / light wave / hold camera or small bag]. Keep the silhouette calm and compact. At most one main prop.
+POSE LOCK:
+Render the `POSE_SIGNATURE` exactly. Face and body orientation are independent. Keep the silhouette calm and compact, with a subtle readable weight shift and at most one main prop. Do not drift back to a front-facing torso, right-facing head, both-hands-center-hold, parallel legs, or generic simple flats unless those exact choices are locked above.
+
+POSE DIVERSITY CONTEXT:
+[LIST COMPARISON CHARACTERS AND THEIR POSE SIGNATURES, OR NONE FOR A SINGLE CHARACTER]. The new character must retain the shared body system while differing in at least three to four of face orientation, body orientation, gesture family, stance, silhouette, and footwear. Prop substitution alone is not differentiation.
 
 COMPOSITION:
 Exact 1:1, 1024×1024 transparent PNG master. Complete character visible with approved safe margin and measurable alpha bounds. No crop, scenery, map, corner panel, text, or UI. The character will later be displayed as a viewport-fixed corner overlay whose visible width defaults to 14% of the map viewport.
@@ -90,4 +104,10 @@ Preserve the accepted pose and city cue. Restore the exact shared [STYLE_VERSION
 
 ```text
 Do not redraw the character master. Update only placement: try [ALTERNATE CORNER], then approved reduced scale. If either still overlaps markers or controls, set visible=false.
+```
+
+## Targeted repair: pose-template repetition
+
+```text
+Preserve the accepted character identity, hairstyle core, outfit core, city palette, 4–4.5-head proportion, face grammar, hand-drawn pen language, and flat-color behavior. Change only the locked POSE_SIGNATURE: [EXACT REPLACEMENT SIGNATURE]. Make face orientation, body orientation, hand placement, prop interaction, weight distribution, foot lead, and footwear silhouette readable at thumbnail scale. Keep the adjustment subtle and travel-map friendly. Do not add a second prop, scenery, text, dramatic motion, extreme profile, crouching, jumping, or a fashion pose.
 ```

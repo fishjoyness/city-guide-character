@@ -12,8 +12,19 @@ hairstyle: 年轻男性或中性气质的短侧分发型，顶部轻微蓬松，
 outfitStyle: 现代博物馆漫步；短款无领外套、圆领上衣与微锥长裤，轻学院但不正式
 primaryColors: [暖灰蓝, 柔和米白, 低饱和砖红, 石灰卡其]
 accentColor: 笔记本封面的一小块低饱和砖红
-poseTendency: 站立略朝地图内侧，一手持小笔记本，一手轻触书页准备记录
+poseTendency: 身体略向右，一手在身侧拿红色笔记本，另一手自然插入口袋
 prop: 一本小型旅行笔记本
+poseSignature:
+  faceOrientation: THREE_QUARTER_LEFT
+  bodyOrientation: SLIGHT_RIGHT
+  gestureFamily: POCKET
+  leftHand: 在左侧腰下单手拿合起的红色旅行笔记本
+  rightHand: 自然插入外套口袋
+  handPoseSignature: left-notebook-at-side + right-pocket
+  stance: SLIGHT_OPEN
+  weightDistribution: right
+  footwear: casual-leather-shoes
+  silhouetteNote: 左侧笔记本、右侧口袋手和微张双脚形成稳定的不对称轮廓
 localFeature: [由北京中轴线砖红与石色关系提取的克制配色, 当代博物馆与城市漫步行为]
 avoid: [古装或长衫, 官帽与宫廷符号, 故宫屋顶贴在人身上, 全身正红, 京剧脸谱, 烤鸭或食物道具, 第二件道具, 上海角色换色]
 mapRole: MAP_VIEWPORT_OVERLAY
@@ -35,4 +46,5 @@ styleVersion: pen-travel-v0.1
 - `STYLE_DIFFERENTIATION = LOW`
 - `LOCAL_FEATURE_INTEGRATION = PASS`
 - `STEREOTYPE_RISK_CONTROL = PASS`
-
+- `POSE_SIGNATURE_LOCKED_BEFORE_GENERATION = PASS`
+- `handPoseSignature = left-notebook-at-side + right-pocket`

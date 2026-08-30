@@ -8,7 +8,7 @@
 
 当前测试城市：**北京 · 上海 · 桂林 · 南京**
 
-左边看角色本身，右边看它真正缩到地图默认约 14% 宽度后还剩下什么。
+总览先横向检查四个人的姿态与剪影差异；各城市章节再检查默认约 14% 地图宽度下的可读性。
 
 ---
 
@@ -34,7 +34,7 @@ CITY_CHARACTER_MANIFEST
 >
 > 看起来属于同一套产品，但不是同一个人换装。
 
-## 🧩 三座城市，三种角色
+## 🧩 四座城市，四种角色
 
 ### Shanghai
 
@@ -97,7 +97,8 @@ CITY_CHARACTER_MANIFEST
 - 所有角色使用同一套手绘钢笔线和柔和色块。
 - 人体比例统一在约 4～4.5 头身，五官、手脚和四肢简化方式一致。
 - 每个城市先研究气质、当代视觉与真实文化，再填写 `CITY_CHARACTER_MANIFEST`。
-- 城市差异不能只靠换发型或换颜色，至少组合气质、穿搭、动作等多个维度。
+- 城市差异不能只靠换发型、换颜色或换手持物；每个 `CITY_CHARACTER_MANIFEST` 必须先锁定 `POSE_SIGNATURE`。
+- 三个及以上角色必须执行 `CROSS_CITY_POSE_REVIEW`，检查脸部和身体朝向、手势、站姿、鞋型、剪影与道具交互。
 - 地域元素最多使用 1～2 个，而且要有真实来源，避免刻板印象。
 - 人物视觉权重始终低于景点贴纸、选中 Marker 和路线。
 
@@ -109,9 +110,11 @@ CITY_CHARACTER_MANIFEST
 STEP 01｜研究城市气质与视觉文化
 STEP 02｜整理颜色、穿搭与地域线索
 STEP 03｜填写 CITY_CHARACTER_MANIFEST
-STEP 04｜应用统一比例和 Style Lock
-STEP 05｜生成透明人物资产
-STEP 06｜制作 14% Map Preview 并检查遮挡
+STEP 04｜锁定 POSE_SIGNATURE
+STEP 05｜应用统一比例和 Style Lock
+STEP 06｜生成透明人物资产
+STEP 07｜制作 14% Map Preview 并检查遮挡
+STEP 08｜执行 CROSS_CITY_POSE_REVIEW
 ```
 
 ## ⚙️ 运行方式

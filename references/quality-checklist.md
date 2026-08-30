@@ -26,10 +26,26 @@ Compare beside at least two accepted attraction stickers:
 - [ ] Original fictional traveler; no copied real or reference person.
 - [ ] Young, relaxed, friendly, and travel-oriented without becoming childish.
 - [ ] One simple pose with at most one main prop.
+- [ ] Final image matches the pre-generation `POSE_SIGNATURE`; face/body orientation, gesture, stance, weight, footwear, and silhouette are visually readable.
 - [ ] Base proportions, face simplification, outfit, and palette follow the frozen character lock.
 - [ ] Body remains inside the shared 4–4.5-head family with common face, hand/foot, and limb simplification.
 - [ ] Character is cute, pretty, gentle, clean, soft, and appealing without becoming glossy, exaggerated, or visually dominant.
 - [ ] No complex gesture, expression-pack exaggeration, animation pose, costume overload, or scene narrative.
+
+## Cross-city pose review — blocking for batches of 3+
+
+Compare equal-height transparent masters in one horizontal or grid showcase, then inspect map-scale previews:
+
+- [ ] `FACE_DIRECTION_DIVERSITY = PASS`: no exact face orientation exceeds 70%, and the batch does not visually face one direction.
+- [ ] `GESTURE_DIVERSITY = PASS`: hands do not repeatedly gather at the chest; repeated `both-hands-center-hold` is blocking.
+- [ ] `STANCE_DIVERSITY = PASS`: weight shifts, foot leads, spacing, or walking-ready silhouettes vary.
+- [ ] `FOOTWEAR_DIVERSITY = PASS`: shoe outlines are not mechanically repeated while shared foot simplification stays stable.
+- [ ] `SILHOUETTE_DIVERSITY = PASS`: outer contours remain distinguishable at thumbnail scale.
+- [ ] `PROP_INTERACTION_DIVERSITY = PASS`: props are held or used asymmetrically in visibly different ways.
+- [ ] `SAME_SYSTEM_DIFFERENT_CHARACTER = PASS`: first impression is one product family, not one body template in different outfits.
+- [ ] At least three to four of `faceOrientation`, `bodyOrientation`, `gestureFamily`, `stance`, `silhouette`, and `footwear` visibly differ for each neighboring comparison.
+
+If any item fails, repair only the smallest failing subset and repeat the complete cross-city pose review.
 
 ## City cues — critical
 
@@ -68,6 +84,14 @@ Compare beside at least two accepted attraction stickers:
 - City cues: PASS | FAIL — source and restraint evidence
 - City research before generation: PASS | FAIL — source manifest evidence
 - CITY_CHARACTER_DIFFERENTIATION: PASS | FAIL — city-specific differences plus retained system traits
+- POSE_SIGNATURE_MATCH: PASS | FAIL — locked signature versus final image
+- FACE_DIRECTION_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- GESTURE_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- STANCE_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- FOOTWEAR_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- SILHOUETTE_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- PROP_INTERACTION_DIVERSITY: PASS | FAIL | NOT APPLICABLE — batch evidence
+- SAME_SYSTEM_DIFFERENT_CHARACTER: PASS | FAIL | NOT APPLICABLE — first-impression evidence
 - Visual hierarchy: PASS | FAIL — map preview evidence
 - Preferred corner: <corner | NONE>
 - Alternate corner: <corner | NONE>

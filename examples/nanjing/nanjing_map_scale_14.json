@@ -12,5 +12,6 @@
   "viewportFixed": true,
   "mapZoomIndependent": true,
   "interaction": "none",
-  "pointerEvents": "none"
+  "pointerEvents": "none",
+  "fallback": "hidden"
 }

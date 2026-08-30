@@ -62,6 +62,16 @@
           "must_do": ["research each city before prompting", "complete both CITY_CHARACTER_MANIFEST records", "keep character differentiation high and style differentiation low", "check detail and 14 percent map-scale views"],
           "must_not_do": ["reuse one face with recolor only", "invent or mix regional clothing cues", "change the shared pen drawing language"]
         }
+      },
+      {
+        "id": "normal-07",
+        "prompt": "这四个城市人物放一起像同一个人体模板换衣服：脸都朝右、双手都在胸前、两腿都平行。请保持画风和身份，只修姿态系统。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 3 through Phase 7",
+          "must_do": ["lock a POSE_SIGNATURE before repair", "vary face and body orientation independently", "run CROSS_CITY_POSE_REVIEW", "repair only failing characters"],
+          "must_not_do": ["change the shared art style", "differentiate only by changing props", "use extreme action poses"]
+        }
       }
     ],
     "edge": [
@@ -93,6 +103,16 @@
           "phase": "Phase 3",
           "must_do": ["surface stereotype and complexity risks", "propose a neutral traveler with at most two restrained cues"],
           "must_not_do": ["default to mascot personification", "add dense symbols"]
+        }
+      },
+      {
+        "id": "edge-04",
+        "prompt": "十个人里有八个人都是 THREE_QUARTER_RIGHT，但衣服和道具不同，可以直接通过吗？",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 7",
+          "must_do": ["mark FACE_DIRECTION_DIVERSITY FAIL", "identify the smallest repair subset", "preserve shared proportions and rendering"],
+          "must_not_do": ["pass because props differ", "mechanically assign extreme profiles"]
         }
       }
     ],

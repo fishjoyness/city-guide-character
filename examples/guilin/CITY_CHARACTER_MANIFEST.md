@@ -12,8 +12,19 @@ hairstyle: 短而轻微卷曲，侧向碎发形成不对称自然轮廓
 outfitStyle: 现代轻户外；简化短外套与宽松长裤，领口只保留一条窄织纹细节
 primaryColors: [漓江雾蓝, 喀斯特柔绿, 岩灰, 米白]
 accentColor: 低饱和靛蓝
-poseTendency: 稍微侧身观察远处路线，同时在小旅行本上做简短记录
+poseTendency: 准备继续步行，一手把旅行本自然垂在身侧，另一只手随步伐轻摆
 prop: 一本小旅行记录本
+poseSignature:
+  faceOrientation: FRONT
+  bodyOrientation: SLIGHT_LEFT
+  gestureFamily: WALKING_READY
+  leftHand: 在左侧自然垂下并握住合上的旅行本
+  rightHand: 轻微后摆并自然放松
+  handPoseSignature: left-notebook-at-side + right-relaxed-swing
+  stance: WALKING_READY
+  weightDistribution: left-with-right-foot-leading
+  footwear: walking-shoes
+  silhouetteNote: 一脚前伸和两臂错开形成轻微行走轮廓
 localFeature: [领口一条经核实的广西壮锦几何织纹语言，面积很小且现代化]
 avoid: [整套民族盛装, 复杂头饰, 多民族元素混搭, 专业登山广告感, 山峰贴在人身上, 第二件道具]
 mapRole: MAP_VIEWPORT_OVERLAY
@@ -27,3 +38,8 @@ styleVersion: pen-travel-v0.1
 - [文化和旅游部：壮族织锦技艺](https://zhuanti.mct.gov.cn/xcss2024_nlhwzzxc/guangxi/detail/8194.html)：核实壮锦是广西真实文化来源。角色只使用一条现代化窄纹样，不暗示所有桂林居民共享同一种服饰。
 
 角色仍然是现代桂林旅行者。地域织物暗示经过研究、面积很小，而且移除后仍不影响角色成立。
+
+## Pose QA
+
+- `POSE_SIGNATURE_LOCKED_BEFORE_GENERATION = PASS`
+- `handPoseSignature = left-notebook-at-side + right-relaxed-swing`

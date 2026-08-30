@@ -1,5 +1,5 @@
 {
-  "input": "D:\\小程序\\city-guide-character\\examples\\beijing\\beijing_character_transparent.png",
+  "input": "D:\\小程序\\city-guide-character\\examples\\shanghai\\shanghai_character_transparent.png",
   "status": "PASS",
   "checks": {
     "format": {
@@ -29,18 +29,18 @@
     "visible_pixels": {
       "pass": true,
       "actual": [
-        387,
+        290,
         162,
-        637,
+        734,
         862
       ]
     },
     "safe_margin": {
       "pass": true,
       "actual": {
-        "left": 0.3779296875,
+        "left": 0.283203125,
         "top": 0.158203125,
-        "right": 0.3779296875,
+        "right": 0.283203125,
         "bottom": 0.158203125
       },
       "minimum": 0.1
@@ -48,7 +48,7 @@
     "footprint": {
       "pass": true,
       "actual": {
-        "width": 0.244140625,
+        "width": 0.43359375,
         "height": 0.68359375
       },
       "maximum": 0.8
@@ -62,19 +62,19 @@
     }
   },
   "visibleBounds": [
-    387,
+    290,
     162,
-    637,
+    734,
     862
   ],
   "margins": {
-    "left": 0.3779296875,
+    "left": 0.283203125,
     "top": 0.158203125,
-    "right": 0.3779296875,
+    "right": 0.283203125,
     "bottom": 0.158203125
   },
   "footprint": {
-    "width": 0.244140625,
+    "width": 0.43359375,
     "height": 0.68359375
   },
   "semanticChecksRequired": [
@@ -84,5 +84,5 @@
     "fourteen-percent map-scale recognizability",
     "absence of background and text"
   ],
-  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\beijing\\beijing_character_thumb.png"
+  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\shanghai\\shanghai_character_thumb.png"
 }

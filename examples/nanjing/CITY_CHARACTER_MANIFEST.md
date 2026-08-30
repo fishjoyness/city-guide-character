@@ -12,8 +12,19 @@ hairstyle: 过肩直发在脑后低束，轻薄侧刘海，轮廓柔和且与上
 outfitStyle: 现代轻文艺；米白短外套配灰绿中长 A 字裙，简洁舒适，适合城市散步
 primaryColors: [温柔米白, 梧桐灰绿, 城墙暖灰, 柔和棕]
 accentColor: 仅在城市折页封面使用少量低饱和砖红
-poseTendency: 安静站立并阅读手中的小型城市折页，身体略向地图内侧
+poseTendency: 一手在身侧拿合起的城市折页，另一手做轻微介绍动作
 prop: 一本小型城市折页
+poseSignature:
+  faceOrientation: THREE_QUARTER_RIGHT
+  bodyOrientation: FRONT
+  gestureFamily: CASUAL_GUIDE
+  leftHand: 在左侧腰下单手拿合起的城市折页
+  rightHand: 在身体右侧做克制的开放式介绍手势
+  handPoseSignature: left-booklet-at-side + right-gentle-guide
+  stance: WEIGHT_LEFT
+  weightDistribution: left
+  footwear: mary-jane
+  silhouetteNote: 窄站姿配右侧开放手势，折页不遮挡躯干中心
 localFeature: [由南京山水城林与明城墙环境提取的灰绿和暖灰关系, 折页封面一小块低饱和砖红呼应城砖色感]
 avoid: [完整汉服, 旗袍刻板印象, 城楼或梧桐叶贴在人身上, 全身金黄色, 古都符号堆叠, 第二件道具, 上海角色换色]
 mapRole: MAP_VIEWPORT_OVERLAY
@@ -28,3 +39,8 @@ styleVersion: pen-travel-v0.1
 - [南京市政府：古都风貌与建筑色彩规定](https://www.nanjing.gov.cn/zdgk/201202/t20120229_1055684.html)：支持克制、协调的老城配色，避免大面积高饱和颜色。
 
 角色不使用直白地标。南京识别来自安静的城市阅读气质、低束长发轮廓、现代轻文艺穿搭、柔和灰绿与暖灰配色，以及城市折页上的一小块砖红色。地域暗示可以移除，不会把角色变成历史服装吉祥物。
+
+## Pose QA
+
+- `POSE_SIGNATURE_LOCKED_BEFORE_GENERATION = PASS`
+- `handPoseSignature = left-booklet-at-side + right-gentle-guide`

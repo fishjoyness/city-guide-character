@@ -1,4 +1,4 @@
-# City Guide Character System v0.1
+# City Guide Character System v0.2
 
 This is provisional. The user-approved shared `STYLE_REFERENCE` remains the final visual authority.
 
@@ -34,7 +34,7 @@ faceSimplification: shared-small-feature-system-with-simple-eyes-minimal-nose-mo
 defaultOutfit: modern-light-travelwear-with-city-specific-variation
 defaultTravelProps:
   - folded-map
-poseComplexity: simple
+poseComplexity: simple-subtle-diversity
 cityCueLimit: 2
 text: none
 background: transparent
@@ -67,16 +67,17 @@ These system fields stay fixed across cities. City identity comes from the manif
 - Freeze hand/foot simplification, small-feature face grammar, eye scale, nose/mouth reduction, limb line language, and overall visual density.
 - Allow only minor natural variation; do not use body ratio as the primary city differentiator.
 
-## Allowed actions
+## Pose grammar
 
-- read or unfold a small map
-- point gently toward the map interior
-- face the reader with a quiet friendly expression
-- sit at the corner edge
-- wave lightly
-- hold a compact camera, small shoulder bag, or one city-relevant prop
+- Lock face orientation independently from body orientation.
+- Use `FRONT`, `SLIGHT_LEFT`, `THREE_QUARTER_LEFT`, `SLIGHT_RIGHT`, or `THREE_QUARTER_RIGHT` for the face; profile is exceptional.
+- Use `FRONT`, `SLIGHT_LEFT`, or `SLIGHT_RIGHT` for the torso.
+- Choose one gesture family: two-hand hold, one-hand hold, pointing, strap/bag interaction, pocket, camera action, casual guide, or walking ready.
+- Choose one stance: neutral parallel, weight left/right, one foot forward, slight open, or walking ready.
+- Choose contemporary footwear that supports outfit and silhouette without becoming a regional costume cue.
+- Record all decisions in `poseSignature` before generation.
 
-Avoid running, jumping, dancing, complex two-handed interactions, exaggerated reaction poses, or gestures that need motion effects.
+Avoid running, jumping, dancing, crouching, back-facing poses, extreme profiles, exaggerated reaction poses, or gestures that need motion effects. `TWO_HAND_HOLD` remains valid but must not become a repeated batch template.
 
 ## City differentiation budget
 
@@ -86,12 +87,12 @@ Use three to five differences per city, selected from:
 2. main palette tendency within the shared muted saturation system;
 3. modern outfit language: light travel, literary, campus, urban casual, or clean light sport;
 4. friendly temperament: quiet, lively, relaxed, serious, or curious/exploratory;
-5. default simple action: map reading, gentle pointing, note taking, photography, or observing a sight;
+5. pose signature: face/body orientation, gesture family, hand interaction, stance, weight, silhouette, and footwear;
 6. one main prop: camera, folded map, small guidebook, backpack, ticket/travel card, or light water bottle.
 
 Keep the same proportion family, face grammar, line, fill, border, shadow, simplification depth, and placement system. Use no more than one main prop and at most one or two restrained city cues. The goal is a series of different roles, not one recolored character and not unrelated art styles.
 
-Hair or pose alone never satisfies differentiation. Coordinate the character's temperament with at least one outfit/palette/local-detail decision.
+Hair, prop, or pose alone never satisfies differentiation. Across comparison characters, at least three to four of face orientation, body orientation, gesture family, stance, silhouette, and footwear must visibly differ, coordinated with outfit/palette/temperament.
 
 ## City-type strategies
 
@@ -132,6 +133,16 @@ Every city defines:
 - `accentColor`
 - `poseTendency`
 - `prop`
+- `poseSignature.faceOrientation`
+- `poseSignature.bodyOrientation`
+- `poseSignature.gestureFamily`
+- `poseSignature.leftHand`
+- `poseSignature.rightHand`
+- `poseSignature.handPoseSignature`
+- `poseSignature.stance`
+- `poseSignature.weightDistribution`
+- `poseSignature.footwear`
+- `poseSignature.silhouetteNote`
 - `localFeature`
 - `avoid`
 - `mapRole`
@@ -163,3 +174,4 @@ Never inherit a reference person's identity, hair, clothes, face, or signature p
 - Reject a character that looks more saturated, detailed, polished, outlined, or dimensional than the attraction set.
 - Reject `CLONE` and `SYSTEM_DRIFT`; record `CITY_CHARACTER_DIFFERENTIATION = PASS | FAIL` with comparison evidence.
 - Final comparison target: `CHARACTER_DIFFERENTIATION = HIGH` and `STYLE_DIFFERENTIATION = LOW`.
+- For sets of three or more, run `CROSS_CITY_POSE_REVIEW`. No exact face direction may exceed 70%; repeated chest-centered hands, parallel-leg silhouettes, generic footwear, or identical prop handling are blocking failures.
