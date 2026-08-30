@@ -1,0 +1,16 @@
+{
+  "asset": "nanjing_character_transparent.png",
+  "preview": "nanjing_map_scale_14.png",
+  "viewport": {
+    "width": 780,
+    "height": 1380
+  },
+  "corner": "bottom-left",
+  "characterViewportWidthRatio": 0.14,
+  "visibleCharacterWidthPx": 109,
+  "viewportSafeMarginPx": 22,
+  "viewportFixed": true,
+  "mapZoomIndependent": true,
+  "interaction": "none",
+  "pointerEvents": "none"
+}
