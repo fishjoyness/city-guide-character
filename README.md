@@ -6,7 +6,7 @@
 
 ![City Guide Character System Showcase](examples/character-system-showcase.png)
 
-当前测试城市：**上海 · 桂林 · 南京**
+当前测试城市：**北京 · 上海 · 桂林 · 南京**
 
 左边看角色本身，右边看它真正缩到地图默认约 14% 宽度后还剩下什么。
 
@@ -65,6 +65,16 @@ CITY_CHARACTER_MANIFEST
 米白与灰绿、安静的阅读动作和现代轻文艺穿搭，表达南京的城市散步与博物馆气质。
 
 [Character Manifest](examples/nanjing/CITY_CHARACTER_MANIFEST.md) · [Transparent PNG](examples/nanjing/nanjing_character_transparent.png)
+
+### Beijing
+
+| Character Detail | 14% Map Preview |
+|---|---|
+| ![Beijing Character Detail](examples/beijing/beijing_character_detail.png) | ![Beijing Map Preview](examples/beijing/beijing_map_scale_14.png) |
+
+沉着的现代博物馆漫步人物，以暖灰蓝、米白和一小块砖红表达中轴观察与古今并置，不使用古装或宫廷符号。
+
+[Character Manifest](examples/beijing/CITY_CHARACTER_MANIFEST.md) · [Transparent PNG](examples/beijing/beijing_character_transparent.png)
 
 ## 🗺️ 为什么是 14%？
 
