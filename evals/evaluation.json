@@ -1,0 +1,132 @@
+{
+  "skill": "city-guide-character",
+  "invocation": { "allow_implicit": true },
+  "cases": {
+    "normal": [
+      {
+        "id": "normal-01",
+        "prompt": "为南京贴片地图设计一个右上角看地图的轻量导览角色，只出方案和 Prompt。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 1 through Phase 5",
+          "must_do": ["inherit the shared sticker style", "plan a simple pose", "define corner placement and hidden fallback"],
+          "must_not_do": ["generate without request", "update production code"]
+        }
+      },
+      {
+        "id": "normal-02",
+        "prompt": "沿用已批准的景点 style-v1，为成都做一个城市角色 STYLE TEST。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 1 through Phase 7",
+          "must_do": ["reuse style-v1 verbatim", "limit city cues to two", "label output CITY CHARACTER STYLE TEST"],
+          "must_not_do": ["start other cities", "declare production approval"]
+        }
+      },
+      {
+        "id": "normal-03",
+        "prompt": "检查这个上海导览角色是不是比景点 Marker 更抢眼。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 7",
+          "must_do": ["compare with accepted attraction markers", "review a map-corner composite", "give evidence-based PASS or FAIL"],
+          "must_not_do": ["judge only the isolated PNG", "change attraction markers to make room"]
+        }
+      },
+      {
+        "id": "normal-04",
+        "prompt": "为西安角色制定一个轻微历史感但不穿完整古装的方案。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 3",
+          "must_do": ["research restrained city cues", "keep a neutral traveler base", "avoid stereotype and costume overload"],
+          "must_not_do": ["invent a historical uniform", "add many symbols"]
+        }
+      },
+      {
+        "id": "normal-05",
+        "prompt": "给城市角色预留 top-left/top-right/bottom-left/bottom-right 和缺失时隐藏的数据结构。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 4",
+          "must_do": ["use the data contract", "include visible scale and fallback", "keep absence silent"],
+          "must_not_do": ["show a missing-config message", "force a default image"]
+        }
+      },
+      {
+        "id": "normal-06",
+        "prompt": "为上海和桂林分别做城市导览人物，要求同系统但明显不是同一个人。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 1 through Phase 7",
+          "must_do": ["research each city before prompting", "complete both CITY_CHARACTER_MANIFEST records", "keep character differentiation high and style differentiation low", "check detail and 14 percent map-scale views"],
+          "must_not_do": ["reuse one face with recolor only", "invent or mix regional clothing cues", "change the shared pen drawing language"]
+        }
+      }
+    ],
+    "edge": [
+      {
+        "id": "edge-01",
+        "prompt": "地图四个角都很挤，但这个城市角色必须显示。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 4",
+          "must_do": ["try alternate corner and approved reduced scale", "hide if collision remains", "explain the product constraint"],
+          "must_not_do": ["cover markers or controls", "move attraction markers"]
+        }
+      },
+      {
+        "id": "edge-02",
+        "prompt": "人物最终比例和画风都没定，先直接批量做 67 个城市。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 1",
+          "must_do": ["stop batch production", "offer one controlled style test or prompt-only plan"],
+          "must_not_do": ["choose the final base character", "generate the batch"]
+        }
+      },
+      {
+        "id": "edge-03",
+        "prompt": "成都角色就做成爱吃火锅的熊猫人，身上堆满城市符号。",
+        "expected": {
+          "trigger": true,
+          "phase": "Phase 3",
+          "must_do": ["surface stereotype and complexity risks", "propose a neutral traveler with at most two restrained cues"],
+          "must_not_do": ["default to mascot personification", "add dense symbols"]
+        }
+      }
+    ],
+    "non_trigger": [
+      {
+        "id": "non-trigger-01",
+        "prompt": "把我的自拍做成一套个人 IP 表情包。",
+        "expected": {
+          "trigger": false,
+          "phase": "none",
+          "must_do": ["route to a personal-IP workflow"],
+          "must_not_do": ["apply map placement rules"]
+        }
+      },
+      {
+        "id": "non-trigger-02",
+        "prompt": "为南京博物院画一张景点贴纸。",
+        "expected": {
+          "trigger": false,
+          "phase": "none",
+          "must_do": ["route to city-sticker"],
+          "must_not_do": ["create a guide character"]
+        }
+      },
+      {
+        "id": "non-trigger-03",
+        "prompt": "在小程序地图页实现角色配置和 z-index。",
+        "expected": {
+          "trigger": false,
+          "phase": "none",
+          "must_do": ["handle as a coding task"],
+          "must_not_do": ["generate character art"]
+        }
+      }
+    ]
+  }
+}

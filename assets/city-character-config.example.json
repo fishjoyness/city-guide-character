@@ -1,0 +1,13 @@
+{
+  "cityId": "nanjing",
+  "characterImage": null,
+  "position": "bottom-right",
+  "visible": true,
+  "characterViewportWidthRatio": 0.14,
+  "contentBounds": { "x": 300, "y": 180, "width": 420, "height": 690 },
+  "styleVersion": "v0.1",
+  "preferredCorners": ["bottom-right", "bottom-left", "top-right", "top-left"],
+  "interaction": "none",
+  "pointerEvents": "none",
+  "fallback": "hidden"
+}
