@@ -1,0 +1,14 @@
+{
+  "asset": "guilin_character_transparent.png",
+  "canvas": {
+    "width": 1024,
+    "height": 1024
+  },
+  "contentBounds": {
+    "x": 396,
+    "y": 162,
+    "width": 231,
+    "height": 700
+  },
+  "CHARACTER_VISIBLE_BOUNDS": "PASS"
+}
