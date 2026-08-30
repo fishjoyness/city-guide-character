@@ -1,0 +1,4 @@
+interface:
+  display_name: "城市导览角色"
+  short_description: "Design lightweight city guide character sticker drafts"
+  default_prompt: "Use $city-guide-character to research one city and design one review-only lightweight map guide character in the approved travel-illustration style."
