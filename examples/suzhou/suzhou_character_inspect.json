@@ -1,0 +1,88 @@
+{
+  "input": "D:\\小程序\\city-guide-character\\examples\\suzhou\\suzhou_character_transparent.png",
+  "status": "PASS",
+  "checks": {
+    "format": {
+      "pass": true,
+      "actual": "PNG"
+    },
+    "canvas": {
+      "pass": true,
+      "actual": [
+        1024,
+        1024
+      ],
+      "expected": [
+        1024,
+        1024
+      ]
+    },
+    "alpha_channel": {
+      "pass": true,
+      "actual": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ]
+    },
+    "visible_pixels": {
+      "pass": true,
+      "actual": [
+        398,
+        162,
+        626,
+        862
+      ]
+    },
+    "safe_margin": {
+      "pass": true,
+      "actual": {
+        "left": 0.388671875,
+        "top": 0.158203125,
+        "right": 0.388671875,
+        "bottom": 0.158203125
+      },
+      "minimum": 0.1
+    },
+    "footprint": {
+      "pass": true,
+      "actual": {
+        "width": 0.22265625,
+        "height": 0.68359375
+      },
+      "maximum": 0.8
+    },
+    "transparent_background": {
+      "pass": true,
+      "actual_alpha_range": [
+        0,
+        255
+      ]
+    }
+  },
+  "visibleBounds": [
+    398,
+    162,
+    626,
+    862
+  ],
+  "margins": {
+    "left": 0.388671875,
+    "top": 0.158203125,
+    "right": 0.388671875,
+    "bottom": 0.158203125
+  },
+  "footprint": {
+    "width": 0.22265625,
+    "height": 0.68359375
+  },
+  "semanticChecksRequired": [
+    "character and landmark sticker style coherence",
+    "four to four-and-a-half head body proportion",
+    "city character differentiation",
+    "fourteen-percent map-scale recognizability",
+    "absence of background and text"
+  ],
+  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\suzhou\\suzhou_character_thumb.png"
+}
