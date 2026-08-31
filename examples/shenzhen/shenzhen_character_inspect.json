@@ -1,0 +1,88 @@
+{
+  "input": "D:\\小程序\\city-guide-character\\examples\\shenzhen\\shenzhen_character_transparent.png",
+  "status": "PASS",
+  "checks": {
+    "format": {
+      "pass": true,
+      "actual": "PNG"
+    },
+    "canvas": {
+      "pass": true,
+      "actual": [
+        1024,
+        1024
+      ],
+      "expected": [
+        1024,
+        1024
+      ]
+    },
+    "alpha_channel": {
+      "pass": true,
+      "actual": [
+        "R",
+        "G",
+        "B",
+        "A"
+      ]
+    },
+    "visible_pixels": {
+      "pass": true,
+      "actual": [
+        356,
+        162,
+        668,
+        862
+      ]
+    },
+    "safe_margin": {
+      "pass": true,
+      "actual": {
+        "left": 0.34765625,
+        "top": 0.158203125,
+        "right": 0.34765625,
+        "bottom": 0.158203125
+      },
+      "minimum": 0.1
+    },
+    "footprint": {
+      "pass": true,
+      "actual": {
+        "width": 0.3046875,
+        "height": 0.68359375
+      },
+      "maximum": 0.8
+    },
+    "transparent_background": {
+      "pass": true,
+      "actual_alpha_range": [
+        0,
+        255
+      ]
+    }
+  },
+  "visibleBounds": [
+    356,
+    162,
+    668,
+    862
+  ],
+  "margins": {
+    "left": 0.34765625,
+    "top": 0.158203125,
+    "right": 0.34765625,
+    "bottom": 0.158203125
+  },
+  "footprint": {
+    "width": 0.3046875,
+    "height": 0.68359375
+  },
+  "semanticChecksRequired": [
+    "character and landmark sticker style coherence",
+    "four to four-and-a-half head body proportion",
+    "city character differentiation",
+    "fourteen-percent map-scale recognizability",
+    "absence of background and text"
+  ],
+  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\shenzhen\\shenzhen_character_thumb.png"
+}
