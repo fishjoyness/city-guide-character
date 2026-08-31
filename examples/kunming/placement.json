@@ -1,0 +1,11 @@
+{
+  "cityId": "kunming",
+  "position": "top-right",
+  "characterViewportWidthRatio": 0.14,
+  "visible": true,
+  "preferredCorners": ["top-right", "top-left", "bottom-right", "bottom-left"],
+  "avoidZones": ["top-navigation", "map-controls", "marker-clusters", "bottom-sheet"],
+  "interaction": "none",
+  "pointerEvents": "none",
+  "fallback": "hidden"
+}
