@@ -29,18 +29,18 @@
     "visible_pixels": {
       "pass": true,
       "actual": [
-        392,
+        379,
         162,
-        631,
+        644,
         862
       ]
     },
     "safe_margin": {
       "pass": true,
       "actual": {
-        "left": 0.3828125,
+        "left": 0.3701171875,
         "top": 0.158203125,
-        "right": 0.3837890625,
+        "right": 0.37109375,
         "bottom": 0.158203125
       },
       "minimum": 0.1
@@ -48,7 +48,7 @@
     "footprint": {
       "pass": true,
       "actual": {
-        "width": 0.2333984375,
+        "width": 0.2587890625,
         "height": 0.68359375
       },
       "maximum": 0.8
@@ -62,19 +62,19 @@
     }
   },
   "visibleBounds": [
-    392,
+    379,
     162,
-    631,
+    644,
     862
   ],
   "margins": {
-    "left": 0.3828125,
+    "left": 0.3701171875,
     "top": 0.158203125,
-    "right": 0.3837890625,
+    "right": 0.37109375,
     "bottom": 0.158203125
   },
   "footprint": {
-    "width": 0.2333984375,
+    "width": 0.2587890625,
     "height": 0.68359375
   },
   "semanticChecksRequired": [

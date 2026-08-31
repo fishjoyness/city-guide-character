@@ -1,13 +1,13 @@
 {
-  "asset": "xiamen_character_transparent.png",
+  "asset": "xiamen-v2_character_transparent.png",
   "canvas": {
     "width": 1024,
     "height": 1024
   },
   "contentBounds": {
-    "x": 392,
+    "x": 404,
     "y": 162,
-    "width": 239,
+    "width": 216,
     "height": 700
   },
   "CHARACTER_VISIBLE_BOUNDS": "PASS"

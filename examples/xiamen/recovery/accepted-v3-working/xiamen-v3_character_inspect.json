@@ -1,5 +1,5 @@
 {
-  "input": "D:\\小程序\\city-guide-character\\examples\\xiamen\\xiamen_character_transparent.png",
+  "input": "D:\\小程序\\city-guide-character\\examples\\xiamen\\xiamen-v3_character_transparent.png",
   "status": "PASS",
   "checks": {
     "format": {
@@ -84,5 +84,5 @@
     "fourteen-percent map-scale recognizability",
     "absence of background and text"
   ],
-  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\xiamen\\xiamen_character_thumb.png"
+  "thumbnail": "D:\\小程序\\city-guide-character\\examples\\xiamen\\xiamen-v3_character_thumb.png"
 }

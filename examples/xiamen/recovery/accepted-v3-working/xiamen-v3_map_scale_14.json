@@ -1,0 +1,17 @@
+{
+  "asset": "xiamen-v3_character_transparent.png",
+  "preview": "xiamen-v3_map_scale_14.png",
+  "viewport": {
+    "width": 780,
+    "height": 1380
+  },
+  "corner": "top-right",
+  "characterViewportWidthRatio": 0.14,
+  "visibleCharacterWidthPx": 109,
+  "viewportSafeMarginPx": 22,
+  "viewportFixed": true,
+  "mapZoomIndependent": true,
+  "interaction": "none",
+  "pointerEvents": "none",
+  "fallback": "hidden"
+}

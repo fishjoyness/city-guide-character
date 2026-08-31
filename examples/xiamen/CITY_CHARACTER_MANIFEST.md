@@ -8,8 +8,8 @@ city: 厦门
 cityType: modern-metropolis
 temperament: 轻松、亲海、开放、适合慢行
 visualKeywords: [海岛步行, 骑行休闲, 近代建筑, 海风, 当代日常]
-hairstyle: 轻盈短发，轮廓与其他城市角色区分
-outfitStyle: 现代海滨休闲；浅色上衣、柔和蓝绿色外套、轻便长裤
+hairstyle: 草帽下的深色低发髻，帽带与发髻形成清晰侧向轮廓
+outfitStyle: 现代海滨休闲；奶油色短开衫、柔和蓝绿色上衣、简洁中长 A 字裙
 primaryColors: [海水青绿, 奶油白, 柔和珊瑚, 暖灰]
 accentColor: 小面积珊瑚色
 poseTendency: 一手调整肩带，另一手自然下垂，准备沿海步行
@@ -24,7 +24,7 @@ poseSignature:
   stance: WEIGHT_RIGHT
   weightDistribution: right
   footwear: simple-sandals
-  silhouetteNote: 肩侧包带、单侧承重与露脚踝凉鞋形成海滨步行轮廓
+  silhouetteNote: 4–4.5 头身紧凑比例；草帽、肩侧包带、单侧承重与露脚踝凉鞋形成海滨步行轮廓
 localFeature: [厦门文旅资料中的海岸休闲与步行/骑行行为, 海水青绿与珊瑚色的克制海滨配色]
 avoid: [闽南仪式服饰泛化, 鼓浪屿建筑堆叠, 海浪道具, 食物道具, logo, 第二件道具]
 mapRole: MAP_VIEWPORT_OVERLAY
@@ -41,3 +41,5 @@ styleVersion: pen-travel-v0.1
 - `CHARACTER_DIFFERENTIATION = HIGH`
 - `STYLE_DIFFERENTIATION = LOW`
 - `POSE_SIGNATURE_LOCKED_BEFORE_GENERATION = PASS`
+- `USER_STYLE_REFERENCE_MATCH = PASS` — 2026-08-31 按用户确认的桂林/南京/北京人物系统定向修复。
+- `PRODUCTION_CANDIDATE = xiamen_character_transparent.png` — 已提升为 v3；旧写实版与中间 v2 保存在 `recovery/`。
