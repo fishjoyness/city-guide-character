@@ -1,0 +1,11 @@
+{
+  "cityId": "changsha",
+  "position": "top-left",
+  "characterViewportWidthRatio": 0.14,
+  "visible": true,
+  "preferredCorners": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "avoidZones": ["top-navigation", "map-controls", "marker-clusters", "bottom-sheet"],
+  "interaction": "none",
+  "pointerEvents": "none",
+  "fallback": "hidden"
+}
