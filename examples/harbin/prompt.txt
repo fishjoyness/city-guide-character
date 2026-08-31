@@ -1,0 +1,10 @@
+ASSET STATUS: PRODUCTION V1 ASSET — USER EXPLICITLY AUTHORIZED BATCH COMPLETION
+
+Create one original fictional young male Harbin city-guide traveler in the exact approved shared character system shown by the references: compact 4–4.5-head Q-style proportions, rounded friendly face, tiny dot eyes, minimal nose and mouth, simplified hands and feet, slightly wobbly dark hand-drawn contours, soft low-saturation flat fills, restrained paper texture, low detail density and generous whitespace.
+
+CITY CHARACTER: calm, friendly modern cold-city traveler; short fluffy side-parted dark hair peeking asymmetrically from a simple oatmeal knit beanie; short misty-blue padded jacket over a warm-gray fine-knit top, charcoal straight trousers, tiny muted wine-red accent, simple winter ankle boots. A pair of small worn earmuffs is part of the outfit; no handheld prop.
+
+POSE_SIGNATURE: face THREE_QUARTER_LEFT; body SLIGHT_RIGHT; left hand lifts to lightly adjust the left earmuff beside the ear; right hand rests inside the jacket side pocket; stance OFFSET_FEET_TOE_OUT with weight on right and left foot slightly forward and turned outward. Keep the knit hat, ear-side lifted arm, pocket hand and offset feet readable at map scale.
+
+Do not copy another character identity. No Russian folk costume, military greatcoat, fur-hat stereotype, ice sculpture, food, text, city name, logo, historical costume, handheld prop, scenery, map screenshot or landmark collage. One full-body character only, centered and fully visible. Perfectly flat uniform #00ff00 chroma-key background with no shadow, floor, gradient, texture or reflection; no bright green in subject.
+
