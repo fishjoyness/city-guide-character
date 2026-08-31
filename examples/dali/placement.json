@@ -1,0 +1,11 @@
+{
+  "cityId": "dali",
+  "position": "bottom-left",
+  "characterViewportWidthRatio": 0.14,
+  "visible": true,
+  "preferredCorners": ["bottom-left", "top-left", "bottom-right", "top-right"],
+  "avoidZones": ["top-navigation", "map-controls", "marker-clusters", "bottom-sheet"],
+  "interaction": "none",
+  "pointerEvents": "none",
+  "fallback": "hidden"
+}

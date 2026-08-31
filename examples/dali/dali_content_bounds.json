@@ -1,0 +1,14 @@
+{
+  "asset": "dali_character_transparent.png",
+  "canvas": {
+    "width": 1024,
+    "height": 1024
+  },
+  "contentBounds": {
+    "x": 162,
+    "y": 162,
+    "width": 700,
+    "height": 700
+  },
+  "CHARACTER_VISIBLE_BOUNDS": "PASS"
+}
