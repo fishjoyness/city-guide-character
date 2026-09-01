@@ -1,0 +1,10 @@
+Create one full-body modern city-guide character for 天津 as a production character asset in the exact same friendly minimalist pen-and-watercolor product system as the accepted guide-character series: rounded simplified face, tiny dot eyes, small warm smile, subtle blush, slim natural proportions, sparse slightly wobbly dark outlines, restrained matte flat fills, light paper texture, no realism and no anime glamour.
+
+Character identity: a young adult male Tianjin city-walk guide with a relaxed, quick-witted, approachable temperament. He has short fluffy side-parted dark hair with a few tips lifted by river wind. Outfit is contemporary and practical: a short navy mac jacket over an ivory fine-striped knit, warm-gray loose pleated trousers, simple dark-brown leather sneakers, and one small brick-red scarf. No costume, no historical robe, no food, no city-name print, no landmark collage.
+
+Lock this exact pose: full body takes a wide side step toward image-right while the torso rotates slightly back toward image-left; face is three-quarter left. Body weight stays on the left leg; right foot extends sideways with toe turned out. Left hand is raised only to shoulder height and lightly pinches the end of the brick-red scarf as it lifts outward in the wind. Right arm hangs naturally outside the right thigh and holds one small unbranded compact camera at low position. Do not put both hands at chest level. Do not make a frontal static standing pose. Do not add a second handheld prop.
+
+The silhouette must read clearly at 14% map scale: wind-lifted hair and scarf form the upper-left motion, wide right side step and low camera form a diagonal counterweight. Keep fingers, limbs, shoes and facial features anatomically clean and simple.
+
+Output one isolated character only, centered with generous padding, on a perfectly uniform pure #00FF00 chroma-key background. No text, labels, city name, landmarks, frame, border, floor, scenery, cast shadow, white halo, caption, watermark, extra person, duplicate limb, cropped body, black background, glow, HDR, 3D or poster treatment.
+
