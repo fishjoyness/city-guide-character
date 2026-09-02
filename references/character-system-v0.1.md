@@ -42,6 +42,12 @@ background: transparent
 
 These system fields stay fixed across cities. City identity comes from the manifest layer, not a different anatomy or rendering grammar.
 
+## Mandatory three-character reference check
+
+For every image-generation call, attach `../assets/reference-character-style-20260902-no-shanghai.png` as an input-only visual calibration board. It is not optional inspiration. The Guilin, Nanjing and Beijing examples establish the exact small dot-eye construction, compact 4–4.5-head proportion, thin hand-drawn dark contour, matte low-saturation flat fill, cheek blush, whitespace and full-body visual scale. The board itself must never be regenerated, composited into, or delivered with the new city character.
+
+Reject a candidate when it adds a new eye design, eye highlights, lashes, glossy anime features, a different outline family, a taller/shorter proportion system, or a more rendered/shaded surface. Pose, hairstyle, outfit, footwear and one prop may vary; the base drawing grammar may not.
+
 ## Provisional visual direction
 
 - Young, relaxed, friendly, and travel-oriented.
