@@ -4,17 +4,17 @@
 
 城市人物不是地图主角。它提供一点陪伴感和城市记忆，但不能挡住 Marker、路线或用户操作。
 
-![City Guide Character System Showcase](examples/character-system-showcase.png)
+![City Guide Character System Showcase](examples/character-system-showcase-no-shanghai.png)
 
-当前测试城市：**北京 · 上海 · 桂林 · 南京**
+当前测试城市：**北京 · 桂林 · 南京**
 
-总览先横向检查四个人的姿态与剪影差异；各城市章节再检查默认约 14% 地图宽度下的可读性。
+总览先横向检查三个人的姿态与剪影差异；各城市章节再检查默认约 14% 地图宽度下的可读性。
 
 ---
 
 ## ✨ 什么是 City Guide Character？
 
-这套系统不会拿一个固定人物，分别换成“上海衣服”“桂林衣服”和“南京衣服”。每个城市都要重新研究，再重新设计一个角色。
+这套系统不会拿一个固定人物，分别换成不同城市的衣服。每个城市都要重新研究，再重新设计一个角色。
 
 ```text
 城市研究
@@ -34,17 +34,7 @@ CITY_CHARACTER_MANIFEST
 >
 > 看起来属于同一套产品，但不是同一个人换装。
 
-## 🧩 四座城市，四种角色
-
-### Shanghai
-
-| Character Detail | 14% Map Preview |
-|---|---|
-| ![Shanghai Character Detail](examples/shanghai/shanghai_character_detail.png) | ![Shanghai Map Preview](examples/shanghai/shanghai_map_scale_14.png) |
-
-利落的短发、灰蓝配色和相机对应上海的都市漫游与摄影气质。设计重点是现代感，不靠堆放城市地标来证明身份。
-
-[Character Manifest](examples/shanghai/CITY_CHARACTER_MANIFEST.md) · [Transparent PNG](examples/shanghai/shanghai_character_transparent.png)
+## 🧩 三座城市，三种角色
 
 ### Guilin
 
